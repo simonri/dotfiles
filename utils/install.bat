@@ -44,7 +44,7 @@ MKDIR "%COC_PATH%"
 
 :CLONE_CONFIG
 ECHO Cloning configuration
-git clone https://github.com/ChristianChiarulli/nvim.git %CONFIG_PATH%
+git clone https://github.com/simonri/nvim-config.git %CONFIG_PATH%
 
 :INSTALL_PLUGINS
 WHERE nvim 2>NUL >NUL || GOTO :EOF
