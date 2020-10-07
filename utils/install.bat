@@ -49,6 +49,7 @@ git clone https://github.com/ChristianChiarulli/nvim.git %CONFIG_PATH%
 :INSTALL_PLUGINS
 WHERE nvim 2>NUL >NUL || GOTO :EOF
 
+MOVE "%CONFIG_PATH\autoload%" ""
 REN "%CONFIG_PATH%\init.vim" "init.vim.tmp" && MOVE "%CONFIG_PATH%\init.vim.tmp" "%NVIM_PATH%"
 MOVE "%CONFIG_PATH%\utils\init.vim" "%NVIM_PATH%"
 echo Installing plugins
