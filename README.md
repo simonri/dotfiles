@@ -4,7 +4,7 @@
 
 ## Install in one command
 
-The following will install this config if you have an existing config it will move it to `~/.config/nvim.old`
+The following will install this config if you have an existing config it will move it to `$NVIM_PATH.old`
 
 This script only supports Mac, Ubuntu and Arch
 
@@ -39,7 +39,7 @@ bash <(curl -s https://raw.githubusercontent.com/ChristianChiarulli/nvim/master/
 ## Clone this repo into your config
 
 ```
-git clone https://github.com/ChristianChiarulli/nvim.git ~/.config/nvim
+git clone https://github.com/ChristianChiarulli/nvim.git $NVIM_PATH
 ```
 
 ## Install python & node support
@@ -107,9 +107,7 @@ Explanations and installation instruction can be found on my blog
 
 ## Language Servers
 
-Since CoC doesn't support all languages in there extensions
-I recommend installing some language servers from scratch
-and adding them to your `coc-settings.json` file
+Since CoC doesn't support all languages in there extensions I recommend installing some language servers from scratch and adding them to your `coc-settings.json` file
 
 Example:
 
