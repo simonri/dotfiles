@@ -17,8 +17,13 @@ WHERE node 2>NUL >NUL && ECHO Node already installed && goto :CHECK_PYNVIM
 ECHO Please install neovim && GOTO :EOF
 
 :CHECK_PYNVIM
-2>NUL pip list | findstr pynvim && ECHO pynvim installed, moving on... && GOTO :MOVE_OLD_NVIM_DIR
+2>NUL pip list | findstr pynvim && ECHO Pynvim already installed, moving on... && GOTO :CHECK_CTAGS
 ECHO Please install pynvim && GOTO :EOF
+
+:CHECK_CTAGS
+WHERE ctags 2>NUL >NUL && ECHO Ctags already installed && goto :MOVE_OLD_NVIM_DIR
+ECHO Please install ctags
+ECHO https://github.com/universal-ctags/ctags-win32/ && GOTO :EOF
 
 :MOVE_OLD_NVIM_DIR
 IF EXIST %NVIM_PATH% (
@@ -49,7 +54,7 @@ git clone https://github.com/simonri/nvim-config.git %CONFIG_PATH%
 :INSTALL_PLUGINS
 WHERE nvim 2>NUL >NUL || GOTO :EOF
 
-MOVE "%CONFIG_PATH\autoload%" ""
+MOVE "%CONFIG_PATH%\autoload" "%NVIM_PATH%"
 REN "%CONFIG_PATH%\init.vim" "init.vim.tmp" && MOVE "%CONFIG_PATH%\init.vim.tmp" "%NVIM_PATH%"
 MOVE "%CONFIG_PATH%\utils\init.vim" "%NVIM_PATH%"
 echo Installing plugins
@@ -58,4 +63,4 @@ MOVE "%NVIM_PATH%\init.vim" "%CONFIG_PATH%\utils"
 REN "%NVIM_PATH%\init.vim.tmp" "init.vim"
 
 :INSTALL_COC_EXTENSIONS
-MKDIR %CONFIG_PATH%/..coc/extensions
+MKDIR "%CONFIG_PATH%/..coc/extensions"

@@ -5,6 +5,8 @@
 "/___/_/ /_/_/\__(_)___/_/_/ /_/ /_/
 
 
+:let g:NVIM_PATH = C:\Users\s9simris\AppData\Local\nvim
+
 " General Settings
 if !exists('g:vscode')
   source $HOME/.config/nvim/plug-config/polyglot.vim
