@@ -60,7 +60,7 @@ else
 endif
 
 " Add paths to node and python here
-if !empty(glob("$~/.config/nvim/paths.vim"))
+if !empty(glob("~/.config/nvim/paths.vim"))
   source $HOME/.config/nvim/paths.vim
 endif
 
