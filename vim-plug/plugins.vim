@@ -1,12 +1,12 @@
 " auto-install vim-plug
-if empty(glob('$NVIM_PATH/autoload/plug.vim'))
-  silent !curl -fLo $NVIM_PATH/autoload/plug.vim --create-dirs
+if empty(glob('$~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo $~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   "autocmd VimEnter * PlugInstall
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
-call plug#begin('$NVIM_PATH/autoload/plugged')
+call plug#begin('$~/.config/nvim/autoload/plugged')
 
     " Better Comments
     Plug 'tpope/vim-commentary'

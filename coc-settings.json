@@ -33,8 +33,8 @@
 	"python.formatting.provider": "black",
 
 	// snippets
-	"snippets.ultisnips.directories": ["UltiSnips", "$NVIM_PATH/snips"],
-	//"snippets.userSnippetsDirectory": "$NVIM_PATH/snips",
+	"snippets.ultisnips.directories": ["UltiSnips", "$~/.config/nvim/snips"],
+	//"snippets.userSnippetsDirectory": "$~/.config/nvim/snips",
 
 	// emmet
 	"emmet.includeLanguages": {

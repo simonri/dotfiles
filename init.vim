@@ -5,8 +5,6 @@
 "/___/_/ /_/_/\__(_)___/_/_/ /_/ /_/
 
 
-:let g:NVIM_PATH = "C:\Users\s9simris\AppData\Local\nvim"
-
 " General Settings
 if !exists('g:vscode')
   source $HOME/.config/nvim/plug-config/polyglot.vim
@@ -62,7 +60,7 @@ else
 endif
 
 " Add paths to node and python here
-if !empty(glob("$NVIM_PATH/paths.vim"))
+if !empty(glob("$~/.config/nvim/paths.vim"))
   source $HOME/.config/nvim/paths.vim
 endif
 
