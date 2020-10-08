@@ -49,20 +49,20 @@ git clone https://github.com/simonri/nvim-config.git "%NVIM_PATH%"
 WHERE nvim 2>NUL >NUL || GOTO :EOF
 
 ECHO Add fake init file
-MOVE "%NVIM_PATH%\appdata.init.vim" "%APPDATA_PATH%\" 2>NUL >NUL
-REN "%APPDATA_PATH%\appdata.init.vim" "init.vim" 2>NUL >NUL
+MOVE "%NVIM_PATH%\appdata.init.vim" "%APPDATA_PATH%\" >NUL
+REN "%APPDATA_PATH%\appdata.init.vim" "init.vim" >NUL
 
-MOVE "%NVIM_PATH%\autoload" "%APPDATA_PATH%\autoload" 2>NUL >NUL
+MOVE "%NVIM_PATH%\autoload" "%APPDATA_PATH%\autoload" >NUL
 
 ECHO Move tmp init to NVIM_PATH
-REN "%NVIM_PATH%\init.vim" "init.vim.tmp" 2>NUL >NUL
-MOVE "%NVIM_PATH%\utils\init.vim" "%NVIM_PATH%" 2>NUL >NUL
+REN "%NVIM_PATH%\init.vim" "init.vim.tmp" >NUL
+MOVE "%NVIM_PATH%\utils\init.vim" "%NVIM_PATH%" >NUL
 
 ECHO Installing plugins
 nvim --headless +PlugInstall +qall
 
-MOVE "%NVIM_PATH%\init.vim" "%NVIM_PATH%\utils" 2>NUL >NUL
-REN "%NVIM_PATH%\init.vim.tmp" "init.vim" 2>NUL >NUL
+MOVE "%NVIM_PATH%\init.vim" "%NVIM_PATH%\utils" >NUL
+REN "%NVIM_PATH%\init.vim.tmp" "init.vim" >NUL
 
 :INSTALL_COC_EXTENSIONS
-MKDIR "%NVIM_PATH%/../coc/extensions" 2>NUL >NUL
+MKDIR "%NVIM_PATH%\..\coc\extensions" >NUL
