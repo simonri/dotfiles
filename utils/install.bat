@@ -66,3 +66,6 @@ REN "%NVIM_PATH%\init.vim.tmp" "init.vim" >NUL
 
 :INSTALL_COC_EXTENSIONS
 MKDIR "%NVIM_PATH%\..\coc\extensions" >NUL
+CD "%NVIM_PATH%\..\coc\extensions"
+npm init -y
+npm install coc-explorer coc-snippets coc-json coc-actions --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
