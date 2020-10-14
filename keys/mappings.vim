@@ -76,6 +76,9 @@ else
   nnoremap <silent> <M-h>    :vertical resize -2<CR>
   nnoremap <silent> <M-l>    :vertical resize +2<CR>
 
+  autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -ulimit -Wall -Wno-unused-result -std=c++11 -O2 % -o %:r && ./%:r < ./input.txt <CR>
+  autocmd filetype cpp nnoremap <F6> :w <bar> !g++ -ulimit -Wall -Wno-unused-result -std=c++11 -O2 % -o %:r && ./%:r <CR>
+
 endif
 
 " Better nav for omnicomplete
