@@ -29,6 +29,8 @@
     " \ 'coc-tabnine',
     " \ 'coc-highlight',
 
+let g:coc_start_at_startup = 1
+
 " Use tab for trigger completion with characters ahead and navigate.
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
