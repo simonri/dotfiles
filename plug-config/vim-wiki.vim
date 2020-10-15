@@ -16,7 +16,7 @@
 " Filetypes enabled for
 let g:vimwiki_filetypes = ['markdown']
 
-let g:vimwiki_list = [{'path': '~/.config/nvim/wiki',
+let g:vimwiki_list = [{'path': $HOME . '/.config/nvim/wiki',
                       \ 'syntax': 'markdown', 'ext': '.md', 'exclude_files': ['**/README.md', '**/Readme.md'] }]
 
 " let g:vimwiki_auto_header = 0

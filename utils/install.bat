@@ -65,6 +65,7 @@ MOVE "%NVIM_PATH%\init.vim" "%NVIM_PATH%\utils" >NUL
 REN "%NVIM_PATH%\init.vim.tmp" "init.vim" >NUL
 
 :INSTALL_COC_EXTENSIONS
+MOVE "%NVIM_PATH%\coc-settings.json" "%APPDATA_PATH%"
 MKDIR "%NVIM_PATH%\..\coc\extensions" >NUL
 CD "%NVIM_PATH%\..\coc\extensions"
 npm init -y
